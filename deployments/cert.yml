@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1beta1
+kind: ManagedCertificate
+metadata:
+  name: manga-manager-certificate
+spec:
+  domains:
+    - manga-manager.m-pipe.net

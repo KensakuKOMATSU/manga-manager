@@ -1,0 +1,11 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: manga-manager-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: manga-manager
+    networking.gke.io/managed-certificates:  manga-manager-certificate
+spec:
+  backend:
+    serviceName: manga-manager
+    servicePort: 3001
